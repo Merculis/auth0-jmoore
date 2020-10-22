@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pizza 42</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="loading">
+    <img src="assets/loading.svg" alt="Loading spinner">
+  </div>
+
+  <div class="content">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Pizza 42</a>
+
+          <button id="btn-home-view" class="btn btn-dark btn-margin">
+              Home
+          </button>
+
+          <button id="btn-profile-view" class="btn btn-dark btn-margin">
+              Profile
+          </button>
+
+          <button id="btn-ping-view" class="btn btn-danger btn-margin">
+              Order Pizza
+          </button>
+
+          <button id="qsLoginBtn" class="btn btn-dark btn-margin">
+              Log In
+          </button>
+
+          <button id="qsLogoutBtn" class="btn btn-dark btn-margin">
+              Log Out
+          </button>
+
+        </div>
+      </div>
+    </nav>
+
+    <section class="bgimage">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1>Pizza 42</h1>
+            <h3>Enjoy a slice of John's Auth-0-entic pie!</h3>
+            <!-- <p><a href="#" class="btn btn-primary btn-large pizza-button">Learn more »</a></p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <!-- home view -->
+      <div id="home-view">
+        <h4></h4>
+      </div>
+      
+      <!-- profile view -->
+      <div id="profile-view" class="panel panel-default profile-area">
+        <div class="panel-heading"><h3>Profile</h3></div>
+        <div class="panel-body">
+          <img class="avatar" alt="avatar">
+          <div>
+            <label><i class="glyphicon glyphicon-user"></i> Nickname</label>
+            <h3 class="nickname"></h3>
+          </div>
+          <pre class="full-profile"></pre>
+        </div>
+      </div>
+
+      <!-- ping view -->
+      <div id="ping-view">
+        <div class="container order-pizza">
+            <h1>Click 'ORDER PIZZA' and have your stunning pie delivered!</h1>
+
+            <p id="call-private-message">
+              You must verify your email address to be able to order from Pizza 42.
+            </p>
+            <!-- Public API Call  -->
+            <!-- <button id="btn-ping-public" class="btn btn-primary">
+                Call Public
+            </button> -->
+    
+            <button id="btn-ping-private" class="btn btn-lg btn-danger">
+                Order Pizza 
+            </button>
+    
+            <h2 id="ping-message"></h2>
+        </div>
+        
+      </div>
+    </main>
+  </div>
+
+  <script src="node_modules/auth0-js/build/auth0.js"></script>
+  <script src="auth0-variables.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
